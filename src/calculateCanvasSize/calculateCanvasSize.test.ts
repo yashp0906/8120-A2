@@ -14,4 +14,8 @@ describe("calculateCanvasSize", () => {
     // -10 * 5 = -50
     expect(calculateCanvasSize("-10", "5")).toEqual(-50);
   });
+  test("should return a positive area when both inputs are negative", () => {
+    // -10 * -5 = 50 (Negative × Negative = Positive)
+    expect(calculateCanvasSize("-10", "-5")).toEqual(50);
+  });
 });
