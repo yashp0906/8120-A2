@@ -9,4 +9,8 @@ describe("paint required calculator", () => {
     // If 1 liter covers 100 square meters, and the area is only 50, we need 0.5 liters
     expect(paintRequiredCalculator(50, 100)).toEqual(0.5);
   });
+  test("should return correct result for large areas", () => {
+    // Large numbers should not break the calculation
+    expect(paintRequiredCalculator(10000, 500)).toEqual(20);
+  });
 });
