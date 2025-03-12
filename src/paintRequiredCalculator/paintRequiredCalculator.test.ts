@@ -13,4 +13,8 @@ describe("paint required calculator", () => {
     // Large numbers should not break the calculation
     expect(paintRequiredCalculator(10000, 500)).toEqual(20);
   });
+  test("should return correct result for exact multiples of coverage", () => {
+    // 100 square meters with 10 square meters per liter → 10 liters needed
+    expect(paintRequiredCalculator(100, 10)).toEqual(10);
+  });
 });
